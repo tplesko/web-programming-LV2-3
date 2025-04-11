@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS, Weather Data, Graph">
+    <meta name="author" content="Tea Pleško">
+    <link rel="stylesheet" href="../styles/grafikon.css">
+    <title>Grafikon</title>
+</head>
+<body>
+    <header>
+        <h1>Grafikon vremenskih podataka</h1>
+    </header>
+
+    <button class="menu">☰ Meni</button>
+    <nav aria-labelledby="primarna-navigacija">
+        <ul role="menu">
+            <li><a href="../index.html">Pocetna</a></li>
+            <li><a href="./grafikon.html">Grafikon</a></li>
+            <li><a href="./slike.html">Slike</a></li>
+        </ul>
+    </nav>
+
+    <main
+        <!-- Bar Chart: Prikaz Temperatura, Vlažnosti i Brzine Vjetra -->
+        <section class="bar-chart-container">
+            <div class="bar-chart">
+                <!-- Prikaz stupaca za različite podatke (Temp, Vlažnost, Wind) -->
+                <div class="bar" style="height: 70%" data-title="Vlažnost: 69% | Lokacija: inland"></div>
+                <div class="bar" style="height: 82%" data-title="Vlažnost: 82% | Lokacija: inland"></div>
+                <div class="bar" style="height: 48%" data-title="Vlažnost: 48% | Lokacija: mountain"></div>
+                <div class="bar" style="height: 35%" data-title="Vlažnost: 35% | Lokacija: coastal"></div>
+                <div class="bar" style="height: 23%" data-title="Vlažnost: 23% | Lokacija: mountain"></div>
+                <div class="bar" style="height: 57%" data-title="Vlažnost: 57% | Lokacija: inland"></div>
+                <div class="bar" style="height: 65%" data-title="Vlažnost: 65% | Lokacija: mountain"></div>
+                <div class="bar" style="height: 96%" data-title="Vlažnost: 96% | Lokacija: inland"></div>
+            </div>
+        </section>
+
+        <!-- Pie Chart: Vrste Vremena -->
+        <section class="pie-chart-container">
+            <div class="pie-chart">
+                <!-- Kružni grafikon za vrste vremena -->
+                <div class="pie-segment label-sunny" data-title="Sunny: 6"></div>
+                <div class="pie-segment label-cloudy" data-title="Cloudy: 5"></div>
+                <div class="pie-segment label-rainy" data-title="Rainy: 5"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

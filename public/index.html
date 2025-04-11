@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="HTML5, CSS"> <!-- Dodani meta tagovi keywords i name -->>
+		<meta name="author" content="Tea Pleško">
+		<link rel="stylesheet" href="./styles/style.css">
+		<title>Vremenski podaci</title>
+	</head>
+	<body>
+		<header>
+		<h1 id="naslov"> Dobrodosli na web stranicu o vremenskim podacima </h1>
+		</header>
+
+		<!-- Primarna navigacija s ARIA atributima -->
+		<button class="menu">☰ Meni</button>
+       	<nav aria-labelledby="primarna-navigacija">
+			<ul role="menu">
+				<li><a href="#">Pocetna</a></li>
+				<li><a href="./pages/grafikon.html">Grafikon</a></li>
+				<li><a href="/slike">Slike</a></li>
+			</ul>
+        </nav>
+
+		<main>
+
+			<h1>Vremenski Podaci</h1>
+
+			<section class="data-container">
+				<table role="table">
+					<tr>
+						<th scope="col">Temperature (°C)</th>
+						<th scope="col">Humidity (%)</th>
+						<th scope="col">Wind Speed (km/h)</th>
+						<th scope="col">Precipitation (%)</th>
+						<th scope="col">Cloud Cover</th>
+						<th scope="col">Atmospheric Pressure</th>
+						<th scope="col">UV Index</th>
+						<th scope="col">Season</th>
+						<th scope="col">Visibility (km)</th>
+						<th scope="col">Location</th>
+						<th scope="col">Weather Type</th>
+					</tr>
+					<tr><td>23</td><td>69</td><td>9.5</td><td>10</td><td>clear</td><td>1012.91</td><td>9</td><td>Spring</td><td>8.5</td><td>inland</td><td>Sunny</td></tr>
+					<tr><td>29</td><td>82</td><td>18</td><td>78</td><td>overcast</td><td>991.54</td><td>3</td><td>Spring</td><td>4</td><td>inland</td><td>Rainy</td></tr>
+					<tr><td>36</td><td>48</td><td>3.5</td><td>11</td><td>partly cloudy</td><td>1024.92</td><td>10</td><td>Autumn</td><td>5.5</td><td>mountain</td><td>Sunny</td></tr>
+					<tr><td>32</td><td>35</td><td>5.5</td><td>9</td><td>partly cloudy</td><td>1010.24</td><td>6</td><td>Summer</td><td>9</td><td>coastal</td><td>Sunny</td></tr>
+					<tr><td>23</td><td>23</td><td>3.5</td><td>8</td><td>clear</td><td>1027.69</td><td>5</td><td>Spring</td><td>6.5</td><td>mountain</td><td>Sunny</td></tr>
+					<tr><td>30</td><td>57</td><td>12.5</td><td>33</td><td>overcast</td><td>1002.2</td><td>1</td><td>Autumn</td><td>7</td><td>inland</td><td>Cloudy</td></tr>
+					<tr><td>28</td><td>65</td><td>1.5</td><td>20</td><td>partly cloudy</td><td>1007</td><td>4</td><td>Spring</td><td>8.5</td><td>mountain</td><td>Cloudy</td></tr>
+					<tr><td>29</td><td>96</td><td>11.5</td><td>79</td><td>partly cloudy</td><td>1013.23</td><td>0</td><td>Spring</td><td>1</td><td>inland</td><td>Rainy</td></tr>
+					<tr><td>35</td><td>63</td><td>8</td><td>3</td><td>clear</td><td>1029.83</td><td>10</td><td>Spring</td><td>5</td><td>mountain</td><td>Sunny</td></tr>
+					<tr><td>18</td><td>82</td><td>8.5</td><td>83</td><td>overcast</td><td>999.13</td><td>0</td><td>Summer</td><td>2.5</td><td>coastal</td><td>Rainy</td></tr>
+					<tr><td>8</td><td>90</td><td>1.5</td><td>70</td><td>partly cloudy</td><td>1011.19</td><td>10</td><td>Spring</td><td>7.5</td><td>mountain</td><td>Cloudy</td></tr>
+					<tr><td>19</td><td>65</td><td>2.5</td><td>20</td><td>partly cloudy</td><td>1016.81</td><td>1</td><td>Spring</td><td>8</td><td>inland</td><td>Cloudy</td></tr>
+					<tr><td>28</td><td>72</td><td>14</td><td>73</td><td>partly cloudy</td><td>1005.12</td><td>1</td><td>Summer</td><td>1</td><td>coastal</td><td>Rainy</td></tr>
+					<tr><td>40</td><td>94</td><td>15</td><td>97</td><td>clear</td><td>1021.59</td><td>3</td><td>Autumn</td><td>4.5</td><td>coastal</td><td>Sunny</td></tr>
+					<tr><td>15</td><td>61</td><td>11</td><td>63</td><td>overcast</td><td>1006.12</td><td>3</td><td>Spring</td><td>4.5</td><td>mountain</td><td>Rainy</td></tr>
+					<tr><td>26</td><td>90</td><td>26</td><td>88</td><td>partly cloudy</td><td>998.97</td><td>4</td><td>Summer</td><td>2.5</td><td>coastal</td><td>Rainy</td></tr>
+					<tr><td>26</td><td>67</td><td>11</td><td>74</td><td>overcast</td><td>993.37</td><td>1</td><td>Spring</td><td>1.5</td><td>inland</td><td>Rainy</td></tr>
+				</table>
+				
+				<!-- Fotografije su unutar aside taga -->
+				<aside aria-labelledby="aside-slike" class="img-container">
+					<picture>
+						<!-- Jedna fotografija je za desktop, a druga za mobilne rezolucije -->
+						<source media="(min-width: 769px)" srcset="./images/img_weather_1.jpg">
+						<source media="(max-width: 768px)" srcset="./images/img_weather_2.jpg">
+						<img src="./images/img_weather_1.jpg" alt="Weather related image">
+					</picture>
+				</aside>
+			</section>
+			<aside aria-labelledby="lokacija">
+				<iframe 
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.001302874974!2d15.981919215955023!3d46.310024979118776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47661ef357b5b1eb%3A0x23e0a3f58c569d7e!2sZagreb!5e0!3m2!1sen!2shr!4v1616589071267!5m2!1sen!2shr" 
+					width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+				</iframe>
+			</aside>
+		</main>
+
+		<footer>
+		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+	</body>
+	</html>

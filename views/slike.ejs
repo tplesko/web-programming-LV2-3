@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML5, CSS">
+    <meta name="author" content="Tea Pleško">
+    <title>Galerija slika</title>
+    <link rel="stylesheet" href="/styles/style_slike.css">
+</head>
+<body>
+ 
+<button class="menu">☰ Meni</button>
+<nav aria-labelledby="primarna-navigacija">
+	<ul role="menu">
+		<li><a href="/">Početna</a></li>
+		<li><a href="#">Grafikon</a></li>
+		<li><a href="/slike">Slike</a></li>
+	</ul>
+</nav>
+ 
+<section class="galerija">
+    <h1>Galerija slika</h1>
+ 
+    <% images.forEach(image => { %>
+    <figure class="galerija_slika">
+        <a href="#<%= image.id %>" title="<%= image.title %>">
+            <img src="<%= image.url %>" alt="<%= image.title %>">
+        </a>
+        <figcaption><%= image.title %></figcaption>
+    </figure>
+    <% }); %>
+</section>
+ 
+<% images.forEach(image => { %>
+<div class="lightbox" id="<%= image.id %>">
+    <a href="#" class="close">X</a>
+    <img src="<%= image.url.replace('/images/', '/images/') %>" alt="<%= image.title %>">
+</div>
+<% }); %>
+ 
+</body>
+</html>
