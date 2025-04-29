@@ -122,29 +122,41 @@ nav a:hover {
 /* Flexbox za podatke */
 .data-container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 30px auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
-aside img {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    transition: transform 0.3s ease-in-out;
-    display: block;
+.data-container table {
+    width: 60%;
+    min-width: 300px;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-radius: 10px;
     overflow: hidden;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    padding-right: 5vw;
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-aside img:hover {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    transform: scale(1.1);
+
+.data-container aside.img-container {
+    width: 30%;
+    min-width: 250px;
+    margin: 0;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-container aside.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 /* Flexbox analiza sekcija */
@@ -203,26 +215,33 @@ footer {
 }
 
 table {
-    border: 5px solid;
-    border-radius: 15px;
-    border-color: rgba(41, 68, 219, 0.8);
-    width: 50%;
-    padding: 5px;
-
-}
-
-th{
-    height: 100px;
-    background-color: rgba(122, 139, 239, 0.8);
-    border-left: none;
-    border-radius: 15px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-size: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-    border-bottom: 1px solid #ddd;
-    border-right: none;
-    border-left: none;
+    padding: 10px;
+    text-align: center;
 }
+
+thead {
+    background-color: rgba(41, 68, 219, 0.8);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: coral;
+    color: white;
+}
+
 
 tr:hover {background-color: coral;}
 
@@ -306,9 +325,10 @@ aside#lokacija iframe {
 
     }
 
-    aside {
-        width: 30%; /* Širina aside na desktopu */
-        padding: 10px;
-        margin-right: 55px;
+    aside.img-container {
+        margin-right: 5%;
+        margin-left: 20px; 
+        width: 30%;
     }
 }
+

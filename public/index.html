@@ -6,6 +6,7 @@
 		<meta name="keywords" content="HTML5, CSS"> <!-- Dodani meta tagovi keywords i name -->>
 		<meta name="author" content="Tea Pleško">
 		<link rel="stylesheet" href="./styles/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 		<title>Vremenski podaci</title>
 	</head>
 	<body>
@@ -77,10 +78,70 @@
 					width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
 				</iframe>
 			</aside>
+			
+			<br>
+			<h1>Prvih 20 elemenata tablice</h1>
+			<table id="vremena-tablica">
+				<thead>
+					<tr>
+						<th>Temperatura</th>
+						<th>Humidity</th>
+						<th>Wind Speed</th>
+						<th>Precipitation</th>
+						<th>Cloud Cover</th>
+						<th>Atmospheric Pressure</th>
+						<th>UV Index</th>
+						<th>Season</th>
+						<th>Visibility</th>
+						<th>Location</th>
+						<th>Weather Type</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+
+			<section class="data-filter">
+				<h1>Tablica filtriranih podataka</h1>
+				<div class="filter-kontrole">
+					<select name="" id="filter-season">
+						<option value="">Odaberi godišnje doba</option>
+						<option value="Spring">Spring</option>
+						<option value="Summer">Summer</option>
+						<option value="Autumn">Autumn</option>
+						<option value="Winter">Winter</option>
+					</select>
+					<button type="button" id="filter-gumb">Filtriraj</button>
+				</div>
+				<table id="filter-tablica">
+					<thead>
+						<tr>
+							<th>Temperatura</th>
+							<th>Humidity</th>
+							<th>Wind Speed</th>
+							<th>Precipitation</th>
+							<th>Cloud Cover</th>
+							<th>Atmospheric Pressure</th>
+							<th>UV Index</th>
+							<th>Season</th>
+							<th>Visibility</th>
+							<th>Location</th>
+							<th>Weather Type</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- mjesto za prikaz filtrirane talbice -->
+					</tbody>
+				</table>
+			</section>
+
 		</main>
+
 
 		<footer>
 		<p>&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
 		</footer>
+
+		<script src="/script.js"></script>
 	</body>
 	</html>
