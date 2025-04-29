@@ -30,19 +30,21 @@
 
 			<section class="data-container">
 				<table role="table">
-					<tr>
-						<th scope="col">Temperature (°C)</th>
-						<th scope="col">Humidity (%)</th>
-						<th scope="col">Wind Speed (km/h)</th>
-						<th scope="col">Precipitation (%)</th>
-						<th scope="col">Cloud Cover</th>
-						<th scope="col">Atmospheric Pressure</th>
-						<th scope="col">UV Index</th>
-						<th scope="col">Season</th>
-						<th scope="col">Visibility (km)</th>
-						<th scope="col">Location</th>
-						<th scope="col">Weather Type</th>
-					</tr>
+					<thead>
+						<tr>
+							<th scope="col">Temperature (°C)</th>
+							<th scope="col">Humidity (%)</th>
+							<th scope="col">Wind Speed (km/h)</th>
+							<th scope="col">Precipitation (%)</th>
+							<th scope="col">Cloud Cover</th>
+							<th scope="col">Atmospheric Pressure</th>
+							<th scope="col">UV Index</th>
+							<th scope="col">Season</th>
+							<th scope="col">Visibility (km)</th>
+							<th scope="col">Location</th>
+							<th scope="col">Weather Type</th>
+						</tr>
+					</thead>
 					<tr><td>23</td><td>69</td><td>9.5</td><td>10</td><td>clear</td><td>1012.91</td><td>9</td><td>Spring</td><td>8.5</td><td>inland</td><td>Sunny</td></tr>
 					<tr><td>29</td><td>82</td><td>18</td><td>78</td><td>overcast</td><td>991.54</td><td>3</td><td>Spring</td><td>4</td><td>inland</td><td>Rainy</td></tr>
 					<tr><td>36</td><td>48</td><td>3.5</td><td>11</td><td>partly cloudy</td><td>1024.92</td><td>10</td><td>Autumn</td><td>5.5</td><td>mountain</td><td>Sunny</td></tr>
@@ -104,6 +106,7 @@
 			<section class="data-filter">
 				<h1>Tablica filtriranih podataka</h1>
 				<div class="filter-kontrole">
+					<label for="filter-season">Godišnje doba:</label>
 					<select name="" id="filter-season">
 						<option value="">Odaberi godišnje doba</option>
 						<option value="Spring">Spring</option>
@@ -111,6 +114,24 @@
 						<option value="Autumn">Autumn</option>
 						<option value="Winter">Winter</option>
 					</select>
+
+					<!-- Lokacija -->
+					<label for="filter-lokacija">Lokacija:</label>
+					<input type="text" id="filter-lokacija" placeholder="npr. mountain">
+
+					<!-- Temperatura -->
+					<div class="temp-row">
+						<label for="filter-temp-min" >Min. temperatura:</label>
+						<input type="range" id="filter-temp-min" min="-30" max="50" value="0">
+						<span id="temp-min-value" class="label-min">0</span>°C
+					</div>
+
+					<div class="temp-row">
+						<label for="filter-temp-max" >Maks. temperatura:</label>
+						<input type="range" id="filter-temp-max" min="0" max="50" value="40">
+						<span id="temp-value" class="label-max">40</span>°C
+					</div>
+
 					<button type="button" id="filter-gumb">Filtriraj</button>
 				</div>
 				<table id="filter-tablica">
@@ -136,6 +157,32 @@
 			</section>
 
 		</main>
+
+		<!-- Ikona za prikaz plana -->
+		<div id="plan-toggle">
+			🗓️
+		</div>
+		
+		<!-- Bočni prikaz plana -->
+		<aside id="plan-sidebar">
+			<h2>Plan aktivnosti</h2>
+			<table id="plan-tablica">
+			<thead>
+				<tr>
+				<th>ID</th>
+				<th>Temp</th>
+				<th>Lokacija</th>
+				<th>Vrijeme</th>
+				<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Ovdje idu dodani dani -->
+			</tbody>
+			</table>
+			<button id="potvrdi-plan">Potvrdi plan</button>
+		</aside>
+  
 
 
 		<footer>
